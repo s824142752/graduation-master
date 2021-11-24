@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/ucenter/index/index",
+    "pages/auth/accountLogin/accountLogin",
+    "pages/index/index",
+    "pages/upload/upload",
+    "pages/ucenter/feedback/feedback",
+    "pages/ucenter/footprint/footprint",
+    "pages/auth/login/login",
+    "pages/auth/reset/reset",
+    "pages/search/search",
+    "pages/help/help",
+    "pages/about/about",
+    "pages/ucenter/myDetail/myDetail",
+    "pages/ucenter/myMessage/myMessage"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "义工管理系统",
+    "enablePullDownRefresh": false,
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "selectedColor": "#AB956D",
+    "color": "#666",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/home.png",
+        "selectedIconPath": "static/images/home@selected.png"
+      },
+      {
+        "pagePath": "pages/upload/upload",
+        "iconPath": "static/images/upload.png",
+        "selectedIconPath": "static/images/upload@selected.png"
+      },
+      {
+        "pagePath": "pages/ucenter/index/index",
+        "iconPath": "static/images/my.png",
+        "selectedIconPath": "static/images/my@selected.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "usingComponents": {
+    "van-cell": "./lib/vant-weapp/cell/index",
+    "van-cell-group": "./lib/vant-weapp/cell-group/index",
+    "van-picker": "./lib/vant-weapp/picker/index",
+    "van-popup": "./lib/vant-weapp/popup/index",
+    "van-field": "./lib/vant-weapp/field/index",
+    "van-uploader": "./lib/vant-weapp/uploader/index",
+    "van-button": "./lib/vant-weapp/button/index",
+    "van-tag": "./lib/vant-weapp/tag/index",
+    "van-icon": "./lib/vant-weapp/icon/index",
+    "van-checkbox": "./lib/vant-weapp/checkbox/index",
+    "van-steps": "./lib/vant-weapp/steps/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

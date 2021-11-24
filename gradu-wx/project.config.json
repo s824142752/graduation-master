@@ -1,0 +1,117 @@
+{
+  "description": "项目配置文件。",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": true,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.7.7",
+  "appid": "wx7bbff18cecad013a",
+  "projectname": "gradu-wx",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "查找",
+          "pathName": "pages/search/search",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "我的",
+          "pathName": "pages/ucenter/index/index",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "登录",
+          "pathName": "pages/auth/login/login",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "账号登录",
+          "pathName": "pages/auth/accountLogin/accountLogin",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "找回密码",
+          "pathName": "pages/auth/reset/reset",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "关于",
+          "pathName": "pages/about/about",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "测试更新",
+          "pathName": "pages/index/index",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "意见反馈",
+          "pathName": "pages/ucenter/feedback/feedback",
+          "query": ""
+        }
+      ]
+    }
+  }
+}

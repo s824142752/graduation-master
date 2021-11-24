@@ -1,0 +1,158 @@
+/* 页面设置白色 */
+page{
+  background-color: #fff;
+}
+
+/* 整个页面的宽度时750rpx
+  设置左右边距20rpx
+  头像设置80rpx
+  头像据右侧10rpx
+  右侧剩余：750-80-20-20-10 = 620
+*/
+.item{
+  display: flex;
+  width: 100%;
+  padding: 20rpx 20rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
+/* 左侧，宽80，距离右侧10rpx：即头像的位置 */
+.left{
+  width: 80rpx;
+  margin-right: 10rpx;
+}
+.avatar{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 10rpx;
+  background: #f3f3f3;
+}
+
+.right{
+  /* 右侧剩余 */
+  width: 620rpx;
+  /* flex布局 */
+  display: flex;
+  /* 按列排 */
+  flex-direction: column;
+}
+.nickname{
+  font-size: 32rpx;
+  line-height: 50rpx;
+  color: #3b4977;
+}
+
+.content{
+  font-size: 32rpx;
+  line-height: 40rpx;
+  margin-right: 15px;
+  color: #181818;
+  margin-bottom: 10rpx;
+}
+
+.image-list{
+  display: flex;
+  /* 可以换行 */
+  flex-wrap: wrap;
+}
+.image-list .image{
+  width: 380rpx;
+  height: 320rpx;
+  /* 设置背景颜色，未加载时占位 */
+  background: #f3f3f3;
+  /* 图片排列空隙 */
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.time-area{
+  display: flex;
+  height: 72rpx;
+  /* 相对定位 */
+  position: relative;
+  align-items: center;
+}
+.time-area .time{
+  font-size: 26rpx;
+  /* 和父元素相同 */
+  line-height: 70rpx;
+  color: #696969;
+}
+.time-area .operation-button{
+  height: 40rpx;
+  width: 70rpx;
+  /* 绝对定位，相对定位里又设置，要生效就要先设置relative */
+  /* 在父元素中的绝对位置 */
+  position: absolute;
+  /* 时间区域最右侧 */
+  right: 0rpx;
+  /* (70-40)  / 2 */
+  top: 15rpx;
+}
+.time-area .operation-pannel{
+  position: absolute;
+  /* 行高跟父控件一样了 */
+  top: 0rpx;
+  /* 离操作按钮还有10rpx */
+  right: 80rpx;
+  width: 300rpx;
+  line-height: 70rpx;
+  background-color: #4c5154;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  color: white;
+  /* 文字居中 */
+  text-align: center;
+}
+.time-area .operation-pannel .tab{
+  /* 不换行 */
+  display: inline-block;
+  /* 平分300 */
+  width: 150rpx;
+}
+.time-area .operation-pannel .typeface{
+  color: white;
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+
+.time-area .operation-pannel .tab .image{
+  width: 26rpx;
+  height: 26rpx;
+  /* 图片居中 */
+  vertical-align: middle;
+  /* 透明的 */
+  background-color: transparent;
+}
+.love-comment{
+  margin-top: 10rpx;
+  background-color: #f7f7f7;
+  width: 100%;
+}
+
+.love{
+  padding: 6rpx 16rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.love .love-icon{
+  width: 26rpx;
+  height: 26rpx;
+}
+
+.love .love-nickname{
+  font-size: 30rpx;
+  line-height: 40rpx;
+  color: #3b4977;
+}
+.comment{
+  padding: 6rpx 16rpx;
+  padding-bottom: 12rpx;
+  font-size: 30rpx;
+}
+.comment .comment-nickname{
+  color: #3b4977;
+}
+.comment .comment-content{
+  color: #181818;
+  line-height: 40rpx;
+}

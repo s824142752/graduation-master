@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.song.db.mapper.StatMapper">
+    <select id="statUser" resultType="map">
+        select
+        substr(add_time,1,10) as day,
+        count(distinct id) as users
+        from gradu_user
+        group by substr(add_time,1,10)
+    </select>
+
+    <select id="statDayInfo" resultType="map">
+        SELECT DATE(create_time) AS date,
+        COUNT(*) AS num
+        FROM information
+        GROUP BY date
+        ORDER BY date desc ;
+    </select>
+
+    <select id="statDiffCollegeUser" resultType="map">
+        select second_college as name,
+        count(*) as value
+        from gradu_user
+        group by second_college
+        order by value desc
+    </select>
+
+    <select id="statDayInfoByEChart" resultType="map">
+        SELECT DATE(create_time) AS name,
+        COUNT(*) AS value
+        FROM information
+        GROUP BY name
+        ORDER BY name desc ;
+    </select>
+
+</mapper>

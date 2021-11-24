@@ -1,0 +1,44 @@
+<view class="personalContainer">
+    <view class="user-section">
+        <image class="bg" src="/static/images/background_our.png"></image>
+        <view class="user-info-box" bindtap="goLogin">
+            <view class="portrait-box">
+                <image class="portrait" src='{{userInfo.avatarUrl}}'></image>
+                <!-- <image class="portrait" src='/static/images/personal/missing-face.png'></image> -->
+            </view>
+            <view class="info-box">
+                <text class="name">{{userInfo.nickName}}</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="cover-container" style="transform: {{coverTransform}}; transition: {{coverTransition}}">
+        <!-- 个人中心导航 -->
+        <view class="nav-section">
+            <!-- <view class="nav-item"  hover-class="common-hover"  hover-stay-time="50">
+                <text class="iconfont icon-interactive"></text>
+                <text>我的消息</text>
+            </view> -->
+            <view class="nav-item"   hover-class="common-hover" hover-stay-time="50" bindtap="goMyDetail">
+                <text class="iconfont icon-icon-test1"></text>
+                <text>个人信息</text>
+            </view>
+            <view class="nav-item"  hover-class="common-hover"  hover-stay-time="50" bindtap='goFeedback'>
+                <!-- <text class="iconfont icon-icon-test2"></text> -->
+                <text class="iconfont icon-interactive"></text>
+                <text>意见反馈</text>
+            </view>
+            <view class="nav-item"  hover-class="common-hover"  hover-stay-time="50" bindtap='aboutUs'>
+                <text class="iconfont icon-icon-test2"></text>
+                <text>关于我们</text>
+            </view>
+        </view>
+        
+        <view wx:if="{{hasLogin}}" class="nav-section">
+          <view class="logout" wx:if="{{hasLogin}}" bindtap="exitLogin">退出登录</view>
+        </view>
+
+        
+    </view>
+
+</view>

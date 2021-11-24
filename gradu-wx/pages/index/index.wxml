@@ -1,0 +1,53 @@
+<!-- 
+  wx:index = "index":列表循环后所有位置都可以访问索引
+ -->
+ <view class="item" wx:for="{{list}}" wx:index = "index" wx:key="key">
+  <view class="left">
+    <image class="avatar" src='{{item.graduUser.avatar}}'></image>
+  </view>
+  <view class="right">
+    <view class="nickname">{{item.graduUser.nickname}}</view>
+    <view class="content">{{item.desc}}</view>
+    <view class="image-list">
+      <image class="image" src='{{item.img2[0]}}'></image>
+    </view>
+    <view class="time-area">
+      <view class="time">{{item.createTime}}</view>
+      <view>
+        <!--
+           data-index="{{index}}"
+            1.设置后在回调函数中currentTarget.dataset中显示
+         -->
+        <image class="operation-button" src="../../static/images/caozuo.png" catchtap="showOperationPannel" data-index="{{index}}"></image>
+        <!-- 判断当前索引和面盘索引是否一致 -->
+        <view class="operation-pannel" wx:if="{{showOperationPannelIndex == index}}">
+          <view class="tab">
+            <image class="image" src="../../static/images/love-white.png"></image>
+            <text class="typeface">赞</text>
+          </view>
+          <view class="tab">
+            <image class="image" src="../../static/images/comment-white.png"></image>
+            <text class="typeface">评论</text>
+          </view>
+        </view>
+      </view>
+      
+    </view>
+    <view class="love-comment">
+      <view class="love" wx:if="{{item.loveList.length > 0}}">
+        <image class="love-icon" src="../../static/images/love-blue.png"></image>
+        <!-- love和整个循环的item不冲突 -->
+        <text class="love-nickname" wx:for-items="{{item.loveList}}"
+        wx:for-item = "love"
+        >{{love.nickname}}</text>
+      </view>
+      <view class="comment" wx:if="{{item.commentList.length > 0}}">
+        <view wx:for-items="{{item.commentList}}"
+        wx:for-item = "comment">
+          <text class="comment-nickname">{{comment.nickname}}</text>
+          <text class="comment-content">{{comment.desc}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
